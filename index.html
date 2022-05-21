@@ -1,352 +1,934 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+    <title>Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-sudy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/05/20/sudy/" class="article-date">
-  <time datetime="2022-05-20T08:37:19.589Z" itemprop="datePublished">2022-05-20</time>
-</a>
+
     
-  </div>
-  <div class="article-inner">
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h1><h4 id="1-DOM元素的获取"><a href="#1-DOM元素的获取" class="headerlink" title="1.DOM元素的获取"></a>1.DOM元素的获取</h4><ol>
-<li>ID名的获取方式:getElementById</li>
-<li>元素名的获取方式:getElementsByTagName</li>
-<li>类名的获取方式getElementsByClassName</li>
-<li>H5新增的获取方式: querySelector       只能获取到第一个元素</li>
-<li>H5新增的获取方式: querySelectorAll</li>
-</ol>
-<h4 id="2-事件注册的方式-2种-各有什么特点"><a href="#2-事件注册的方式-2种-各有什么特点" class="headerlink" title="2.事件注册的方式(2种,各有什么特点)"></a>2.事件注册的方式(2种,各有什么特点)</h4><ol>
-<li>传统注册事件方式:btn.onclick = function() {}   onlick类型注册事件,需要加on 同一个类型注册事件之后会被后一个覆盖.            解绑事件:btn.onclick = null</li>
-<li>监听注册事件方式:btn.addEventListener(‘click’,  function(){})   click类型注册事件,不需要加on同一个类型可以注册多个事件.     移除监听 btn.removeEventListener(‘click’, fn)</li>
-</ol>
-<h4 id="3-innerText-与innerHTML-的区别"><a href="#3-innerText-与innerHTML-的区别" class="headerlink" title="3.innerText 与innerHTML 的区别"></a>3.innerText 与innerHTML 的区别</h4><ol>
-<li>innerText不识别标签 空格,只能进行内容的添加</li>
-<li>innerHTML识别标签空格,可以同时添加标签以及内容</li>
-</ol>
-<h4 id="4-页面加载事件"><a href="#4-页面加载事件" class="headerlink" title="4.页面加载事件"></a>4.页面加载事件</h4><ol>
-<li><p>方式一 :  window.onload = function(){}       window.addEventListener(“load”,function(){})</p>
-</li>
-<li><p>方式二 :  window.addEventListener(‘DOMContentLoaded’,function(){})</p>
-</li>
-</ol>
-<h4 id="5-js基础-数组方法-变量命名-表达式等-隐式转换"><a href="#5-js基础-数组方法-变量命名-表达式等-隐式转换" class="headerlink" title="5.js基础 数组方法 变量命名 表达式等 隐式转换"></a>5.js基础 数组方法 变量命名 表达式等 隐式转换</h4><h4 id="6-css权重相关-伪元素-伪类"><a href="#6-css权重相关-伪元素-伪类" class="headerlink" title="6.css权重相关,伪元素,伪类"></a>6.css权重相关,伪元素,伪类</h4><ol>
-<li><p>css权重: !important无穷大 &gt; 行内样式1000 &gt; ID选择器100 &gt; 类选择器,伪类选择器 10 &gt; 元素选择器1 &gt; 继承或者通配符选择器0</p>
-</li>
-<li><p>伪元素:    :before 在…..之前创建    :after 在…..之后创建    伪元素是创建了一个新元素，而伪类本身就存在只不过不用特别声明</p>
-</li>
-<li><p>伪类 :   :hover 鼠标触碰事件    : focus 焦点事件       伪元素只能同时使用一个，伪类可以同时使用多个</p>
-</li>
-</ol>
-<h4 id="7-flex相关-居中定位"><a href="#7-flex相关-居中定位" class="headerlink" title="7.flex相关,居中定位"></a>7.flex相关,居中定位</h4><p>在css标签内，通过display设置div为flex布局，将flex-direction属性设置为column 此时为更换主轴方向，实现元素垂直排列，将justify-content属性设置为center，实现div内元素在垂直方向居中对齐，将align-items属性设置为center，实现div内元素水平方向居中对齐</p>
-<h4 id="8-作用域相关-变量函数等提升"><a href="#8-作用域相关-变量函数等提升" class="headerlink" title="8.作用域相关,变量函数等提升"></a>8.作用域相关,变量函数等提升</h4><h4 id="9-em-rem"><a href="#9-em-rem" class="headerlink" title="9.em,rem"></a>9.em,rem</h4><ol>
-<li>rem是基于html元素的字体大小来决定</li>
-<li>em则根据使用它的元素的大小决定  1em = 相对元素大小</li>
-</ol>
-<h4 id="10-transfrom-animation"><a href="#10-transfrom-animation" class="headerlink" title="10.transfrom animation"></a>10.transfrom animation</h4><h4 id="11-offset-client-scroll-系列"><a href="#11-offset-client-scroll-系列" class="headerlink" title="11.offset  client  scroll 系列"></a>11.offset  client  scroll 系列</h4><ol>
-<li><p>offsetWidth/offsetHeight获取到的大小 包含 padding + border + width</p>
-</li>
-<li><p>offsetLeft , offsetTop :</p>
-<p>获得元素距离带有定位父元素的位置,返回值不带单位<br>什么叫定位父元素 : position =&gt; absoluter,fixed,relative,sticky ,除了static .<br>如果父元素没有定位,那么久以body为参考</p>
-</li>
-<li><p>client 宽度 和我们offsetWidth 最大的区别就是 不包含边框</p>
-</li>
-<li><p>scorll 滚动滚动事件</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// scroll 系列</span><br><span class="line">       var div = document.querySelector(&#x27;div&#x27;);</span><br><span class="line">       console.log(div.scrollHeight);</span><br><span class="line">       console.log(div.clientHeight);</span><br><span class="line">       // scroll滚动事件当我们滚动条发生变化会触发的事件</span><br><span class="line">       div.addEventListener(&#x27;scroll&#x27;, function() &#123;</span><br><span class="line">           console.log(div.scrollTop);</span><br><span class="line">       &#125;)</span><br><span class="line">       // 页面滚动事件的监听</span><br><span class="line">       document.addEventListener(&#x27;scroll&#x27;,function()&#123;</span><br><span class="line">           console.log(window.pageYOffset)</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure>
 
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
 
-
-<p>####12.节点操作 ,节点属性</p>
-<p>节点操作</p>
-<table>
-<thead>
-<tr>
-<th align="center">概念</th>
-<th align="left">网页中的所有内容都是节点（标签、属性、文本、注释等），在DOM 中，节点使用 node 来表示。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">父节点</td>
-<td align="left">node.parentNode</td>
-</tr>
-<tr>
-<td align="center">子节点</td>
-<td align="left">所有子节点：node.childNodes       实际开发中  :   第一个元素子节点  node.children[0]    最后一个元素子节点node.children[node.children.length - 1 ]</td>
-</tr>
-<tr>
-<td align="center">兄弟节点</td>
-<td align="left">下一个兄弟元素节点：node.nextElementSibling      上一个兄弟元素节点： node.previousElementSibling</td>
-</tr>
-<tr>
-<td align="center">创建节点</td>
-<td align="left">document.createElement(‘tagName’)</td>
-</tr>
-<tr>
-<td align="center">添加节点</td>
-<td align="left">后面添加：node.appendChild(child)            前面添加：node.insertBefore(child, 指定元素)                           node：父元素，child要插入的元素，在指定元素之前插入</td>
-</tr>
-</tbody></table>
-<p>节点属性</p>
-<table>
-<thead>
-<tr>
-<th align="center">删除节点</th>
-<th><strong>node.removeChild(child)</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">复制节点</td>
-<td>var dupNode = node.cloneNode()</td>
-</tr>
-<tr>
-<td align="center">创建元素的方式</td>
-<td>方式一  :   element.innerHTML     方式二 :   document.createElement()</td>
-</tr>
-</tbody></table>
-<h4 id="13-盒模型"><a href="#13-盒模型" class="headerlink" title="13.盒模型"></a>13.盒模型</h4><p>box-sizing：border-box;   设置之后盒子实际宽度不受padding与border影响</p>
-<h4 id="14-事件委托"><a href="#14-事件委托" class="headerlink" title="14.事件委托"></a>14.事件委托</h4><p>给父节点设置监听事件,利用事件冒泡影响每一个子节点</p>
-<h4 id="15-this指向"><a href="#15-this指向" class="headerlink" title="15.this指向"></a>15.this指向</h4><ol>
-<li>全局作用域中 this指向全局对象window</li>
-<li>定时器里面的this指向window, (不是箭头函数的时候)</li>
-<li>方法调用中谁调用this指向谁</li>
-<li>构造函数中this指向构造函数的实例</li>
-</ol>
-<h4 id="16-js执行机制"><a href="#16-js执行机制" class="headerlink" title="16.js执行机制"></a>16.js执行机制</h4><ol>
-<li>我们先判断Js任务是同步任务还是异步任务,所有的同步任务都放入主线程的执行栈中执行</li>
-<li>异步任务会提交给异步进程,比如click事件,setTimeout等,当满足触发条件,异步进程会将异步任务放入任务队列中</li>
-<li>当主线程中所有的(所有的,所有的)同步任务执行完后,会去任务队列中查找是否有异步任务,如果有,拿到主线程中执行,执行完后,再去任务队列中查找,不断循环</li>
-</ol>
-<h4 id="17-new"><a href="#17-new" class="headerlink" title="17.new"></a>17.new</h4><p>  new关键字执行过程:</p>
-<ul>
-<li>​       new 构造函数可以在内存中创建一个空的对象</li>
-<li>​       his 就会指向刚才创建的空对象</li>
-<li>​        开始执行构造函数里面的代码 给这个空对象添加属性和方法</li>
-<li>​        返回这个对象</li>
-</ul>
-<h4 id="18-数据类型"><a href="#18-数据类型" class="headerlink" title="18.数据类型"></a>18.数据类型</h4><ol>
-<li>基本数据类型 （Number,String,Boolean,Undefifined,Null，symbol，bigInt）</li>
-<li>引用数据类型 （object，Array)</li>
-</ol>
-<h4 id="19-sessionStorage-localStorage"><a href="#19-sessionStorage-localStorage" class="headerlink" title="19.sessionStorage ,localStorage"></a>19.sessionStorage ,localStorage</h4><ol>
-<li>声明周期的区别 : localStorage是永久存储在浏览器中，只要当用户不删除数据，则该数据就会一直存放在localStorage中。sessionStorage也就是当用户关闭浏览器，此时数据就会被销毁</li>
-<li>存储大小：localStorage和sessionStorage存储大小都是5MB。</li>
-<li>存储内容类型：localStorage和sessionStorage只能存储字符串类型，如果遇到其他类型，则可以使用JSON对象的stringify和parse进行处理。</li>
-<li>获取方式：</li>
-</ol>
-<ul>
-<li><p>localStorage: window.localStorage</p>
-</li>
-<li><p>sessionStorage: window.sessionStorage。</p>
-<p>应用场景：localStorage用于长期登录，sessionStorage用于敏感账号的登录。</p>
-</li>
-</ul>
-<h4 id="20-全选与反选操作"><a href="#20-全选与反选操作" class="headerlink" title="20.全选与反选操作"></a>20.全选与反选操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        // 1.获取元素</span><br><span class="line">        var iptAll = document.querySelector(&#x27;#j_cbAll&#x27;)</span><br><span class="line">        var ipts  = document.querySelector(&#x27;#j_tb&#x27;).querySelectorAll(&#x27;input&#x27;)</span><br><span class="line">        console.log(ipts)</span><br><span class="line">        // 2.绑定循环事件</span><br><span class="line">        // 给全选框添加事件</span><br><span class="line">        iptAll.addEventListener(&#x27;click&#x27;,function()&#123;</span><br><span class="line">            for (var i = 0; i &lt; ipts.length;i++)&#123;</span><br><span class="line">                ipts[i].checked = this.checked</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        // 给下方的选择框添加事件</span><br><span class="line">        var tbody = document.querySelector(&#x27;#j_tb&#x27;)</span><br><span class="line">        tbody.addEventListener(&#x27;click&#x27;,function()&#123;</span><br><span class="line">            var flag = true</span><br><span class="line">            for (var i = 0; i &lt; ipts.length; i++) &#123;</span><br><span class="line">                // !ipts[i].checked 代表只要有一个为false 则执行里面的语句 否则不执行</span><br><span class="line">                if (!ipts[i].checked) &#123;</span><br><span class="line">                    iptAll.checked = false</span><br><span class="line">                    flag = false</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    iptAll.checked = flag</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        </span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="21-动态生成表格案例上移下移删除操作"><a href="#21-动态生成表格案例上移下移删除操作" class="headerlink" title="21.动态生成表格案例上移下移删除操作"></a>21.动态生成表格案例上移下移删除操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       // 1.先去准备好学生的数据</span><br><span class="line">       var datas = [&#123;</span><br><span class="line">           name: &#x27;魏璎珞&#x27;,</span><br><span class="line">           subject: &#x27;JavaScript&#x27;,</span><br><span class="line">           score: 100</span><br><span class="line">       &#125;, &#123;</span><br><span class="line">           name: &#x27;弘历&#x27;,</span><br><span class="line">           subject: &#x27;JavaScript&#x27;,</span><br><span class="line">           score: 98</span><br><span class="line">       &#125;, &#123;</span><br><span class="line">           name: &#x27;傅恒&#x27;,</span><br><span class="line">           subject: &#x27;JavaScript&#x27;,</span><br><span class="line">           score: 99</span><br><span class="line">       &#125;, &#123;</span><br><span class="line">           name: &#x27;明玉&#x27;,</span><br><span class="line">           subject: &#x27;JavaScript&#x27;,</span><br><span class="line">           score: 88</span><br><span class="line">       &#125;, &#123;</span><br><span class="line">           name: &#x27;大猪蹄子&#x27;,</span><br><span class="line">           subject: &#x27;JavaScript&#x27;,</span><br><span class="line">           score: 0</span><br><span class="line">       &#125;];</span><br><span class="line">       var tbody = document.querySelector(&#x27;tbody&#x27;)</span><br><span class="line">       for (var i = 0; i &lt; datas.length; i++ )&#123;</span><br><span class="line">           // 先创建行 tr</span><br><span class="line">           var tr = document.createElement(&#x27;tr&#x27;)</span><br><span class="line">           tbody.appendChild(tr)</span><br><span class="line">           // 再创建列 td</span><br><span class="line">           for (var k in datas[i]) &#123;</span><br><span class="line">               var td = document.createElement(&#x27;td&#x27;)</span><br><span class="line">               td.innerHTML = datas[i][k]</span><br><span class="line">               tr.appendChild(td)</span><br><span class="line">           &#125;</span><br><span class="line">           // 创建删除/上移/下移的td</span><br><span class="line">           var td = document.createElement(&#x27;td&#x27;)</span><br><span class="line">           td.innerHTML = &#x27;&lt;button class = &quot;del&quot;&gt;删除&lt;/button&gt;&lt;button class = &quot;top&quot;&gt;上移&lt;/button&gt;&lt;button class = &quot;down&quot;&gt;下移&lt;/button&gt;&#x27;</span><br><span class="line">           tr.appendChild(td)</span><br><span class="line">       &#125;</span><br><span class="line">       // 获取删除/上移/下移按钮元素</span><br><span class="line">       var dels = document.querySelectorAll(&#x27;.del&#x27;)</span><br><span class="line">       var tops = document.querySelectorAll(&#x27;.top&#x27;)</span><br><span class="line">       var downs = document.querySelectorAll(&#x27;.down&#x27;)</span><br><span class="line">       var trs = tbody.querySelectorAll(&#x27;tr&#x27;)</span><br><span class="line">       console.log(trs)</span><br><span class="line">       console.log(tops)</span><br><span class="line"></span><br><span class="line">       tbody.addEventListener(&#x27;click&#x27;,function(e)&#123;</span><br><span class="line">       for (var i = 0 ; i &lt; dels.length ; i++) &#123;</span><br><span class="line">           var tr = e.target.parentNode.parentNode</span><br><span class="line">           // tbody = this</span><br><span class="line">           var tr_ps = tr.previousElementSibling // tr的上一个兄弟节点</span><br><span class="line">           var tr_next = tr.nextElementSibling // tr的下一个兄弟节点</span><br><span class="line">           if (e.target == dels[i]) &#123; // 当点击删除按钮时</span><br><span class="line">               this.removeChild(tr)</span><br><span class="line">           &#125; else if (e.target == tops[i]) &#123; // 当点击到上移按钮时   上移操作</span><br><span class="line">               while(tr_ps &amp;&amp; tr_ps.nodeType != 1) &#123; // tr存在上一个兄弟节点 且 兄弟节点不属于元素节点时</span><br><span class="line">                   tr_ps = tr_ps.previousElementSibling</span><br><span class="line">               &#125;</span><br><span class="line">               if (tr_ps) &#123; //  tr 存在上一个兄弟节点</span><br><span class="line">                   this.insertBefore(tr,tr_ps) // 交换位置</span><br><span class="line">               &#125;</span><br><span class="line">           &#125; else if (e.target == downs[i]) &#123;</span><br><span class="line">               while(tr_next &amp;&amp; tr_next.nodeType != 1) &#123; // 同理</span><br><span class="line">                   tr_next = tr_next.nextElementSibling</span><br><span class="line">               &#125;</span><br><span class="line">               if (tr_next) &#123; //  tr 存在下一个兄弟节点</span><br><span class="line">                   this.insertBefore(tr_next,tr) // 交换位置</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       &#125;)</span><br><span class="line">   &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-      
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/20/sudy/" data-id="cl3fudj6p000094dbck0q883y" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/05/19/hello-world/" class="article-date">
-  <time datetime="2022-05-19T08:24:28.349Z" itemprop="datePublished">2022-05-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><h2 id="api"><a href="#api" class="headerlink" title="api"></a>api</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+            <div class="cover-btns">
+                <a href="#articles" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
-      
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/19/hello-world/" data-id="cl3fudj6u000194db2cno9cvf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
+    
+</div>
 
-  
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
 
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
 
-</section>
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
         
-          <aside id="sidebar">
-  
-    
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
-  
-    
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
 
-  
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
     
-  
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/05/20/sudy/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/19/hello-world/">(no title)</a>
-          </li>
-        
-      </ul>
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
     </div>
-  </div>
+</div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/05/20/sudy/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                资料整理1.DOM元素的获取
+ID名的获取方式:getElementById
+元素名的获取方式:getElementsByTagName
+类名的获取方式getElementsByClassName
+H5新增的获取方式: querySelec
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/05/19/hello-world/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                htmlcssapiCreate a new post1$ hexo new "My New Post"
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Gen
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
 </footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
 
+    
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+	
+    
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
 
+    
 
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
 
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
+
 </html>
