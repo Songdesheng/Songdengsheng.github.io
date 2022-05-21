@@ -31,7 +31,7 @@
 
 <meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -236,7 +236,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/Songdesheng" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -293,7 +293,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/Songdesheng" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -511,10 +511,19 @@
 <li><p>scorll 滚动滚动事件</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// scroll 系列</span><br><span class="line">       var div = document.querySelector('div');</span><br><span class="line">       console.log(div.scrollHeight);</span><br><span class="line">       console.log(div.clientHeight);</span><br><span class="line">       // scroll滚动事件当我们滚动条发生变化会触发的事件</span><br><span class="line">       div.addEventListener('scroll', function() {</span><br><span class="line">           console.log(div.scrollTop);</span><br><span class="line">       })</span><br><span class="line">       // 页面滚动事件的监听</span><br><span class="line">       document.addEventListener('scroll',function(){</span><br><span class="line">           console.log(window.pageYOffset)</span><br><span class="line">       })</span><br></pre></td></tr></tbody></table></figure>
-
-
-
+<pre><code> // scroll 系列
+        var div = document.querySelector('div');
+        console.log(div.scrollHeight);
+        console.log(div.clientHeight);
+        // scroll滚动事件当我们滚动条发生变化会触发的事件
+        div.addEventListener('scroll', function() {
+            console.log(div.scrollTop);
+        })
+        // 页面滚动事件的监听
+        document.addEventListener('scroll',function(){
+            console.log(window.pageYOffset)
+        })
+</code></pre>
 <p>####12.节点操作 ,节点属性</p>
 <p>节点操作</p>
 <table>
@@ -599,10 +608,109 @@
 <p>应用场景：localStorage用于长期登录，sessionStorage用于敏感账号的登录。</p>
 </li>
 </ul>
-<h4 id="20-全选与反选操作"><a href="#20-全选与反选操作" class="headerlink" title="20.全选与反选操作"></a>20.全选与反选操作</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        // 1.获取元素</span><br><span class="line">        var iptAll = document.querySelector('#j_cbAll')</span><br><span class="line">        var ipts  = document.querySelector('#j_tb').querySelectorAll('input')</span><br><span class="line">        console.log(ipts)</span><br><span class="line">        // 2.绑定循环事件</span><br><span class="line">        // 给全选框添加事件</span><br><span class="line">        iptAll.addEventListener('click',function(){</span><br><span class="line">            for (var i = 0; i &lt; ipts.length;i++){</span><br><span class="line">                ipts[i].checked = this.checked</span><br><span class="line">            }</span><br><span class="line">        })</span><br><span class="line">        // 给下方的选择框添加事件</span><br><span class="line">        var tbody = document.querySelector('#j_tb')</span><br><span class="line">        tbody.addEventListener('click',function(){</span><br><span class="line">            var flag = true</span><br><span class="line">            for (var i = 0; i &lt; ipts.length; i++) {</span><br><span class="line">                // !ipts[i].checked 代表只要有一个为false 则执行里面的语句 否则不执行</span><br><span class="line">                if (!ipts[i].checked) {</span><br><span class="line">                    iptAll.checked = false</span><br><span class="line">                    flag = false</span><br><span class="line">                } else {</span><br><span class="line">                    iptAll.checked = flag</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        })</span><br><span class="line">        </span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="20-全选与反选操作"><a href="#20-全选与反选操作" class="headerlink" title="20.全选与反选操作"></a>20.全选与反选操作</h4><pre><code>&lt;script&gt;
+        // 1.获取元素
+        var iptAll = document.querySelector('#j_cbAll')
+        var ipts  = document.querySelector('#j_tb').querySelectorAll('input')
+        console.log(ipts)
+        // 2.绑定循环事件
+        // 给全选框添加事件
+        iptAll.addEventListener('click',function(){
+            for (var i = 0; i &lt; ipts.length;i++){
+                ipts[i].checked = this.checked
+            }
+        })
+        // 给下方的选择框添加事件
+        var tbody = document.querySelector('#j_tb')
+        tbody.addEventListener('click',function(){
+            var flag = true
+            for (var i = 0; i &lt; ipts.length; i++) {
+                // !ipts[i].checked 代表只要有一个为false 则执行里面的语句 否则不执行
+                if (!ipts[i].checked) {
+                    iptAll.checked = false
+                    flag = false
+                } else {
+                    iptAll.checked = flag
+                }
+            }
+        })
+        
+    &lt;/script&gt;
+</code></pre>
+<h4 id="21-动态生成表格案例上移下移删除操作"><a href="#21-动态生成表格案例上移下移删除操作" class="headerlink" title="21.动态生成表格案例上移下移删除操作"></a>21.动态生成表格案例上移下移删除操作</h4><pre><code> &lt;script&gt;
+        // 1.先去准备好学生的数据
+        var datas = [{
+            name: '魏璎珞',
+            subject: 'JavaScript',
+            score: 100
+        }, {
+            name: '弘历',
+            subject: 'JavaScript',
+            score: 98
+        }, {
+            name: '傅恒',
+            subject: 'JavaScript',
+            score: 99
+        }, {
+            name: '明玉',
+            subject: 'JavaScript',
+            score: 88
+        }, {
+            name: '大猪蹄子',
+            subject: 'JavaScript',
+            score: 0
+        }];
+        var tbody = document.querySelector('tbody')
+        for (var i = 0; i &lt; datas.length; i++ ){
+            // 先创建行 tr
+            var tr = document.createElement('tr')
+            tbody.appendChild(tr)
+            // 再创建列 td
+            for (var k in datas[i]) {
+                var td = document.createElement('td')
+                td.innerHTML = datas[i][k]
+                tr.appendChild(td)
+            }
+            // 创建删除/上移/下移的td
+            var td = document.createElement('td')
+            td.innerHTML = '&lt;button class = "del"&gt;删除&lt;/button&gt;&lt;button class = "top"&gt;上移&lt;/button&gt;&lt;button class = "down"&gt;下移&lt;/button&gt;'
+            tr.appendChild(td)
+        }
+        // 获取删除/上移/下移按钮元素
+        var dels = document.querySelectorAll('.del')
+        var tops = document.querySelectorAll('.top')
+        var downs = document.querySelectorAll('.down')
+        var trs = tbody.querySelectorAll('tr')
+        console.log(trs)
+        console.log(tops)
 
-<h4 id="21-动态生成表格案例上移下移删除操作"><a href="#21-动态生成表格案例上移下移删除操作" class="headerlink" title="21.动态生成表格案例上移下移删除操作"></a>21.动态生成表格案例上移下移删除操作</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       // 1.先去准备好学生的数据</span><br><span class="line">       var datas = [{</span><br><span class="line">           name: '魏璎珞',</span><br><span class="line">           subject: 'JavaScript',</span><br><span class="line">           score: 100</span><br><span class="line">       }, {</span><br><span class="line">           name: '弘历',</span><br><span class="line">           subject: 'JavaScript',</span><br><span class="line">           score: 98</span><br><span class="line">       }, {</span><br><span class="line">           name: '傅恒',</span><br><span class="line">           subject: 'JavaScript',</span><br><span class="line">           score: 99</span><br><span class="line">       }, {</span><br><span class="line">           name: '明玉',</span><br><span class="line">           subject: 'JavaScript',</span><br><span class="line">           score: 88</span><br><span class="line">       }, {</span><br><span class="line">           name: '大猪蹄子',</span><br><span class="line">           subject: 'JavaScript',</span><br><span class="line">           score: 0</span><br><span class="line">       }];</span><br><span class="line">       var tbody = document.querySelector('tbody')</span><br><span class="line">       for (var i = 0; i &lt; datas.length; i++ ){</span><br><span class="line">           // 先创建行 tr</span><br><span class="line">           var tr = document.createElement('tr')</span><br><span class="line">           tbody.appendChild(tr)</span><br><span class="line">           // 再创建列 td</span><br><span class="line">           for (var k in datas[i]) {</span><br><span class="line">               var td = document.createElement('td')</span><br><span class="line">               td.innerHTML = datas[i][k]</span><br><span class="line">               tr.appendChild(td)</span><br><span class="line">           }</span><br><span class="line">           // 创建删除/上移/下移的td</span><br><span class="line">           var td = document.createElement('td')</span><br><span class="line">           td.innerHTML = '&lt;button class = "del"&gt;删除&lt;/button&gt;&lt;button class = "top"&gt;上移&lt;/button&gt;&lt;button class = "down"&gt;下移&lt;/button&gt;'</span><br><span class="line">           tr.appendChild(td)</span><br><span class="line">       }</span><br><span class="line">       // 获取删除/上移/下移按钮元素</span><br><span class="line">       var dels = document.querySelectorAll('.del')</span><br><span class="line">       var tops = document.querySelectorAll('.top')</span><br><span class="line">       var downs = document.querySelectorAll('.down')</span><br><span class="line">       var trs = tbody.querySelectorAll('tr')</span><br><span class="line">       console.log(trs)</span><br><span class="line">       console.log(tops)</span><br><span class="line"></span><br><span class="line">       tbody.addEventListener('click',function(e){</span><br><span class="line">       for (var i = 0 ; i &lt; dels.length ; i++) {</span><br><span class="line">           var tr = e.target.parentNode.parentNode</span><br><span class="line">           // tbody = this</span><br><span class="line">           var tr_ps = tr.previousElementSibling // tr的上一个兄弟节点</span><br><span class="line">           var tr_next = tr.nextElementSibling // tr的下一个兄弟节点</span><br><span class="line">           if (e.target == dels[i]) { // 当点击删除按钮时</span><br><span class="line">               this.removeChild(tr)</span><br><span class="line">           } else if (e.target == tops[i]) { // 当点击到上移按钮时   上移操作</span><br><span class="line">               while(tr_ps &amp;&amp; tr_ps.nodeType != 1) { // tr存在上一个兄弟节点 且 兄弟节点不属于元素节点时</span><br><span class="line">                   tr_ps = tr_ps.previousElementSibling</span><br><span class="line">               }</span><br><span class="line">               if (tr_ps) { //  tr 存在上一个兄弟节点</span><br><span class="line">                   this.insertBefore(tr,tr_ps) // 交换位置</span><br><span class="line">               }</span><br><span class="line">           } else if (e.target == downs[i]) {</span><br><span class="line">               while(tr_next &amp;&amp; tr_next.nodeType != 1) { // 同理</span><br><span class="line">                   tr_next = tr_next.nextElementSibling</span><br><span class="line">               }</span><br><span class="line">               if (tr_next) { //  tr 存在下一个兄弟节点</span><br><span class="line">                   this.insertBefore(tr_next,tr) // 交换位置</span><br><span class="line">               }</span><br><span class="line">           }</span><br><span class="line">       }</span><br><span class="line">       })</span><br><span class="line">   &lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
-
+        tbody.addEventListener('click',function(e){
+        for (var i = 0 ; i &lt; dels.length ; i++) {
+            var tr = e.target.parentNode.parentNode
+            // tbody = this
+            var tr_ps = tr.previousElementSibling // tr的上一个兄弟节点
+            var tr_next = tr.nextElementSibling // tr的下一个兄弟节点
+            if (e.target == dels[i]) { // 当点击删除按钮时
+                this.removeChild(tr)
+            } else if (e.target == tops[i]) { // 当点击到上移按钮时   上移操作
+                while(tr_ps &amp;&amp; tr_ps.nodeType != 1) { // tr存在上一个兄弟节点 且 兄弟节点不属于元素节点时
+                    tr_ps = tr_ps.previousElementSibling
+                }
+                if (tr_ps) { //  tr 存在上一个兄弟节点
+                    this.insertBefore(tr,tr_ps) // 交换位置
+                }
+            } else if (e.target == downs[i]) {
+                while(tr_next &amp;&amp; tr_next.nodeType != 1) { // 同理
+                    tr_next = tr_next.nextElementSibling
+                }
+                if (tr_next) { //  tr 存在下一个兄弟节点
+                    this.insertBefore(tr_next,tr) // 交换位置
+                }
+            }
+        }
+        })
+    &lt;/script&gt;
+</code></pre>
 
                 
             </div>
@@ -1124,7 +1232,7 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/Songdesheng" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
